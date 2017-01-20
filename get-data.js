@@ -42,18 +42,16 @@ w.onmessage = (msg) => {
         }
     }
     if (wsMsg instanceof Array && !(wsMsg[1] instanceof Array) && wsMsg[1] != 'hb') {
-        console.log(JSON.stringify(getTradeObject()))
+        // Send event
+        senderPromise.then(function(tx) {
+            tx.on('errorReceived', function(err) { console.log(err) })
+            tx.send(getTradeObject())
+        })
     }
 
 
 
-    // Send event
 
-
-    /*senderPromise.then(function (tx) {
-        tx.on('errorReceived', function (err) { console.log(err) })
-        tx.send(tradeMsg)
-    })*/
 
 }
 
