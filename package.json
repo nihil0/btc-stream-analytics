@@ -1,12 +1,16 @@
 {
-    "name": "btc-stream-analytics",
-    "version": "1.0.0",
-    "description": "",
-    "main": "get-data.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "MIT"
+  "name": "btc-stream-analytics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "get-data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "azure-event-hubs": "0.0.5",
+    "ws": "1.1.1"
+  }
 }
